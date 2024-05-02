@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { MoviesModule } from './movies/movies.module';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       entities: [__dirname + '/**/*.entity{.js,.ts}'],
     }),
     MoviesModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
