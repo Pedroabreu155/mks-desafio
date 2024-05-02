@@ -8,6 +8,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { AuthGuard } from './auth/auth.guard';
 import { APP_GUARD } from '@nestjs/core';
+import { CacheModule } from './cache/cache.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { APP_GUARD } from '@nestjs/core';
     MoviesModule,
     AuthModule,
     UsersModule,
+    CacheModule,
   ],
   controllers: [AppController],
   providers: [
